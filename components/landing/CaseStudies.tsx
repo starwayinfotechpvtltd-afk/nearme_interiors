@@ -179,7 +179,7 @@ const prefersReducedMotion: boolean =
     ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
     : false;
 
-function useInView(threshold: number = 0.15): [React.RefObject<HTMLElement>, boolean] {
+function useInView(threshold: number = 0.15): [React.RefObject<HTMLElement | null>, boolean] {
   const ref = useRef<HTMLElement>(null);
   const [inView, setInView] = useState<boolean>(prefersReducedMotion);
 
@@ -310,7 +310,7 @@ function CaseStudyCard({ study, index, onOpenLead }: CaseStudyCardProps) {
 
   return (
     <article
-      ref={ref as React.RefObject<HTMLElement>}
+      ref={ref}
       style={{ transitionDelay: prefersReducedMotion ? '0ms' : `${index * 110}ms` }}
       className={`group relative bg-slate-50 rounded-[28px] border border-slate-100 grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-10 transition-all duration-700 ease-out hover:shadow-[0_24px_60px_-20px_rgba(15,23,42,0.18)] hover:-translate-y-1 motion-reduce:transition-none ${
         inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'

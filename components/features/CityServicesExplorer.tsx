@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import {
   Search, MapPin, Link2, FileText, Settings,
   TrendingUp, BarChart3, Star, Globe, ShoppingCart,
@@ -61,22 +61,24 @@ function getDesc(slug: string, existing?: string): string {
 }
 
 /* ─── Animations ─────────────────────────────────────────────────────────── */
-const panelAnim = {
+const smoothEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const panelAnim: Variants = {
   initial:  { opacity: 0, x: 14 },
-  animate:  { opacity: 1, x: 0, transition: { duration: 0.26, ease: [0.22,1,0.36,1] } },
+  animate:  { opacity: 1, x: 0, transition: { duration: 0.26, ease: smoothEase } },
   exit:     { opacity: 0, x: -10, transition: { duration: 0.16 } },
 };
-const gridAnim = {
+const gridAnim: Variants = {
   hidden:   {},
   visible:  { transition: { staggerChildren: 0.05, delayChildren: 0.08 } },
 };
-const cardAnim = {
+const cardAnim: Variants = {
   hidden:   { opacity: 0, y: 10 },
-  visible:  { opacity: 1, y: 0, transition: { duration: 0.28, ease: [0.22,1,0.36,1] } },
+  visible:  { opacity: 1, y: 0, transition: { duration: 0.28, ease: smoothEase } },
 };
-const dropdownAnim = {
+const dropdownAnim: Variants = {
   initial:  { opacity: 0, y: 10, scale: 0.97 },
-  animate:  { opacity: 1, y: 0,  scale: 1,  transition: { duration: 0.22, ease: [0.22,1,0.36,1] } },
+  animate:  { opacity: 1, y: 0,  scale: 1,  transition: { duration: 0.22, ease: smoothEase } },
   exit:     { opacity: 0, y: 8,  scale: 0.97, transition: { duration: 0.16 } },
 };
 

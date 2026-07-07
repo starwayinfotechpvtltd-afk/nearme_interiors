@@ -364,12 +364,12 @@ import ServicesDropdown from './ServicesDropdown';
 
 function useScrollY() {
   const [y, setY] = useState(0);
-  const rafRef = useRef<number>();
+  const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
     const fn = () => {
       // Use requestAnimationFrame for smoother updates
-      if (rafRef.current) {
+      if (rafRef.current !== null) {
         cancelAnimationFrame(rafRef.current);
       }
       rafRef.current = requestAnimationFrame(() => {
@@ -380,8 +380,9 @@ function useScrollY() {
     window.addEventListener('scroll', fn, { passive: true });
     return () => {
       window.removeEventListener('scroll', fn);
-      if (rafRef.current) {
+      if (rafRef.current !== null) {
         cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
       }
     };
   }, []);

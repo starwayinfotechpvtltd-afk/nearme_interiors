@@ -14,7 +14,7 @@ import {
   PieChart,
   Pie,
   Cell,
-  TooltipProps,
+  TooltipContentProps,
 } from 'recharts';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -106,7 +106,7 @@ function useCountUp(target: number, duration = 1300): number {
 
 // ─── Tooltip Components ───────────────────────────────────────────────────────
 
-function RankTooltip({ active, payload, label }: TooltipProps<number, string>) {
+function RankTooltip({ active, payload, label }: TooltipContentProps) {
   if (!active || !payload?.length) return null;
   return (
     <div className="bg-[#1e2340] border border-white/10 rounded-xl px-4 py-2 text-xs text-slate-200">
@@ -116,7 +116,7 @@ function RankTooltip({ active, payload, label }: TooltipProps<number, string>) {
   );
 }
 
-function BarTooltip({ active, payload, label }: TooltipProps<number, string>) {
+function BarTooltip({ active, payload, label }: TooltipContentProps) {
   if (!active || !payload?.length) return null;
   return (
     <div className="bg-[#1e2340] border border-white/10 rounded-xl px-4 py-2 text-xs text-slate-200">
@@ -267,7 +267,7 @@ export default function SEOFeatures() {
                       domain={[1, 16]}
                       tickFormatter={(v) => `#${v}`}
                     />
-                    <Tooltip content={<RankTooltip />} />
+                    <Tooltip content={RankTooltip} />
                     <Area
                       type="monotone"
                       dataKey="rank"
@@ -328,7 +328,7 @@ export default function SEOFeatures() {
                         v >= 1000 ? `${(v / 1000).toFixed(1)}k` : String(v)
                       }
                     />
-                    <Tooltip content={<BarTooltip />} />
+                    <Tooltip content={BarTooltip} />
                     <Bar dataKey="vol" fill="url(#barGrad)" radius={[6, 6, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
