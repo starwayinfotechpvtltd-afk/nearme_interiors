@@ -94,7 +94,7 @@ export default function Home() {
         <CaseStudies/>
         <Testimonials />
         <ProcessTimeline />
-        <PricingSection onOpenLead={handleOpenLead} />
+        {/* <PricingSection onOpenLead={handleOpenLead} /> */}
         <ComparisonTable />
         <LeadMagnetCapture />
         <FaqAccordion />
