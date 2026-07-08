@@ -39,7 +39,7 @@ export default function Footer() {
                 text-white/[0.04]
                 leading-none
               "
-            style={{ fontSize: 'clamp(120px, 18vw, 260px)' }}
+            style={{ fontSize: "clamp(4rem, 15vw, 16rem)", }}
           >
             NeaR Me
           </p>
@@ -81,9 +81,7 @@ export default function Footer() {
             <div>
               <p className="text-[14px] font-black uppercase tracking-[0.18em] text-slate-400 mb-3">Address</p>
               <p className="text-[13px] text-slate-400 leading-relaxed">
-                Level 5, Maker Maxity<br />
-                Bandra Kurla Complex<br />
-                Mumbai, MH 400051
+                59C/ Tiljala Road, <br /> JBS Haldane Ave, Gobra,<br/> Kolkata, West Bengal 700046
               </p>
             </div>
             <div>
@@ -129,7 +127,7 @@ export default function Footer() {
               <div className="relative">
                 <input
                   type="email"
-                  placeholder="name@studio.com"
+                  placeholder="info@starwaywebdigital.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-slate-900 border border-slate-700 rounded-lg py-2.5 pl-3 pr-10 text-[13px] focus:outline-none focus:border-brand-secondary text-white placeholder:text-slate-600"
@@ -144,13 +142,31 @@ export default function Footer() {
               {error && <p className="text-[11px] text-red-400">{error}</p>}
               {subscribed && <p className="text-[11px] text-green-400 font-semibold">You&apos;re subscribed!</p>}
             </form>
+          {/* number and email */}
+          <div className="mt-4">
+            <p className="text-[15px] text-slate-400">
+              Call Us: +91 8240669415
+            </p>
+            <p className="text-[15px] text-slate-400">
+              Email Us: info@starwaywebdigital.com
+            </p>
+          </div>
           </div>
         </div>
       </div>
       {/* ══════════════════════════════════════
+          LEGAL DISCLAIMER
+      ══════════════════════════════════════ */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-1 border-t border-slate-800">
+        <p className="text-[11px] text-slate-400 leading-relaxed">
+          <span className="font-bold text-white">Legal Disclaimer:</span> This website is independently owned and operated. It is not part of or associated with Near Me Interiors Pvt. Ltd.
+        </p>
+      </div>
+
+      {/* ══════════════════════════════════════
           BOTTOM COPYRIGHT STRIP
       ══════════════════════════════════════ */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] text-slate-600 font-medium">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] text-slate-600 font-medium">
         <div>
           <p className="uppercase tracking-wider">© {new Date().getFullYear()} NeaR Me Interior All Rights Reserved</p>
         </div>

@@ -40,7 +40,7 @@ const TRUSTED_BRANDS = [
 
 export default function HeroSection({ onOpenLead }: HeroSectionProps) {
   return (
-    <section className="hero-selection relative min-h-screen flex flex-col bg-[#070E1C] overflow-hidden">
+    <section className="hero-selection relative min-h-screen flex flex-col bg-[#070E1C] overflow-hidden ">
       {/* ── Ambient glow blobs ── */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full bg-[#1A3A6E]/40 blur-[120px]" />
@@ -61,7 +61,7 @@ export default function HeroSection({ onOpenLead }: HeroSectionProps) {
           HERO BODY
       ══════════════════════════════════════ */}
       <div className="relative z-10 flex flex-1 items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:py-16 py-24 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
             {/* ── LEFT: Copy ── */}
             <div className="space-y-7">
@@ -304,12 +304,12 @@ export default function HeroSection({ onOpenLead }: HeroSectionProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative py-8"
+        className="relative py-6 sm:py-8"
       >
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Glass Container */}
           <div
-            className="relative overflow-hidden rounded-[32px] p-3 bg-white/[0.08] backdrop-blur-2xl border border-white/15 shadow-[0_20px_60px_rgba(59,130,246,0.15)]"
+            className="relative overflow-hidden rounded-2xl sm:rounded-[28px] lg:rounded-[32px] p-2.5 sm:p-3 bg-white/[0.08] backdrop-blur-2xl border border-white/15 shadow-[0_20px_60px_rgba(59,130,246,0.15)]"
           >
             {/* Glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-white/5 to-blue-500/10" />
@@ -318,11 +318,11 @@ export default function HeroSection({ onOpenLead }: HeroSectionProps) {
             <div
               className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:40px_40px]"
             />
-            <div className="relative flex items-center gap-3">
+            <div className="relative grid grid-cols-2 gap-2.5 sm:gap-3 md:grid-cols-4 lg:grid-cols-[repeat(4,minmax(0,1fr))_minmax(280px,340px)]">
               {TRUSTED_BRANDS.map((brand) => (
                 <div
                   key={brand.name}
-                  className="flex-1 min-w-0 h-[82px] rounded-3xl bg-white/[0.12] backdrop-blur-xl border border-white/20 flex items-center justify-center transition-all duration-300 hover:bg-white/[0.16] hover:border-blue-400/30 hover:-translate-y-1 "
+                  className="min-w-0 h-16 sm:h-[74px] lg:h-[82px] rounded-2xl lg:rounded-3xl bg-white/[0.12] backdrop-blur-xl border border-white/20 flex items-center justify-center px-3 transition-all duration-300 hover:bg-white/[0.16] hover:border-blue-400/30 hover:-translate-y-1"
                 >
                   <Image
                     src={brand.logo}
@@ -330,14 +330,14 @@ export default function HeroSection({ onOpenLead }: HeroSectionProps) {
                     width={170}
                     height={60}
                     priority
-                    className="max-h-10 w-auto object-contain"
+                    className="max-h-8 sm:max-h-9 lg:max-h-10 max-w-full w-auto object-contain"
                   />
                 </div>
               ))}
 
               {/* CTA */}
               <div
-                className="relative overflow-hidden w-[340px] h-[82px] rounded-3xl bg-gradient-to-r from-[#356BFF] via-[#3F7BFF] to-[#2D5BEB] border border-white/20 shadow-[0_15px_40px_rgba(59,130,246,0.35)] flex items-center gap-4 px-6 shrink-0"
+                className="relative overflow-hidden col-span-2 md:col-span-4 lg:col-span-1 min-h-20 lg:h-[82px] rounded-2xl lg:rounded-3xl bg-gradient-to-r from-[#356BFF] via-[#3F7BFF] to-[#2D5BEB] border border-white/20 shadow-[0_15px_40px_rgba(59,130,246,0.35)] flex items-center justify-center sm:justify-start gap-3 sm:gap-4 px-4 sm:px-6"
               >
                 {/* Internal Glow */}
                 <div
@@ -345,15 +345,15 @@ export default function HeroSection({ onOpenLead }: HeroSectionProps) {
                 />
                 {/* Icon Glass Box */}
                 <div
-                  className="relative w-11 h-11 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center"
+                  className="relative w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center"
                 >
                   <Users className="w-5 h-5 text-white" />
                 </div>
-                <div className="relative">
-                  <h4 className="text-white text-[15px] font-semibold leading-tight">
+                <div className="relative min-w-0">
+                  <h4 className="text-white text-[14px] sm:text-[15px] font-semibold leading-tight">
                     More Than Just Marketing.
                   </h4>
-                  <p className="text-blue-100 text-[15px] font-medium">
+                  <p className="text-blue-100 text-[14px] sm:text-[15px] font-medium leading-tight mt-0.5">
                     We're Growth Partners.
                   </p>
                 </div>

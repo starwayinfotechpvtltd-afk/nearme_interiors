@@ -189,7 +189,7 @@ export default function PortfolioShowcase() {
               <button
                 key={f.key}
                 onClick={() => setFilter(f.key)}
-                className="relative px-4 py-2 rounded-full text-[12px] font-bold transition-colors duration-150 cursor-pointer"
+                className="relative px-2 sm:px-4 py-2 rounded-full text-[12px] font-bold transition-colors duration-150 cursor-pointer"
               >
                 {filter === f.key && (
                   <motion.span

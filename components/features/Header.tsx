@@ -161,7 +161,7 @@
 //                   }`}
 //               >
 //                 <Phone className="h-3.5 w-3.5 text-brand-secondary" />
-//                 +91 22 6982 7800
+//                 +91 8240669415
 //               </a>
 
 //               <div className={`h-5 w-px ${scrolled ? 'bg-slate-200' : 'bg-white/15'}`} />
@@ -234,7 +234,7 @@
 //                 <div className="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
 //                   <a href="tel:+912269827800" className="flex items-center gap-2 text-brand-primary font-semibold text-sm py-2.5 px-3 rounded-xl hover:bg-slate-50 transition-colors">
 //                     <Phone className="h-4 w-4 text-brand-secondary" />
-//                     +91 22 6982 7800
+//                     +91 8240669415
 //                   </a>
 //                   <button
 //                     onClick={() => { setMobileOpen(false); setIsLeadOpen(true); }}
@@ -475,7 +475,7 @@ export default function Header() {
   const phoneDisplay = useMemo(() => {
     if (isMobile) return '+91';
     if (isTablet) return '+91 22';
-    return '+91 22 6982 7800';
+    return '+91 8240669415';
   }, [isMobile, isTablet]);
 
   const headerHeight = useMemo(() => {
@@ -797,7 +797,7 @@ export default function Header() {
                     className="flex items-center gap-2 text-brand-primary font-semibold text-xs sm:text-sm py-2 px-3 rounded-xl hover:bg-slate-50 transition-colors"
                   >
                     <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-brand-secondary" />
-                    +91 22 6982 7800
+                    +91 8240669415
                   </a>
                   <button
                     onClick={() => {

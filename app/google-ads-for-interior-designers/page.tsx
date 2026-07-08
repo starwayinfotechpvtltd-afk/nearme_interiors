@@ -758,7 +758,7 @@ export default function GoogleAdsPageClient() {
                         className="flex items-center justify-center gap-2 w-full py-3 border border-slate-200 hover:border-slate-300 text-brand-primary hover:bg-slate-50 text-[13px] font-bold rounded-xl transition-all"
                       >
                         <Phone className="h-4 w-4 text-brand-secondary" />
-                        Call Us: +91 22 6982 7800
+                        Call Us: +91 8240669415
                       </a>
                     </div>
                     <p className="text-[10px] text-brand-muted text-center pt-1 font-semibold">Average response time: &lt; 10 minutes</p>
@@ -880,7 +880,7 @@ export default function GoogleAdsPageClient() {
                     className="px-8 py-4 border border-white/12 hover:border-white/20 bg-white/5 text-white font-bold text-[14px] rounded-xl flex items-center justify-center gap-2 transition-all duration-250"
                   >
                     <Phone className="h-4 w-4 text-brand-accent" />
-                    Call +91 22 6982 7800
+                    Call +91 8240669415
                   </a>
                 </div>
               </div>

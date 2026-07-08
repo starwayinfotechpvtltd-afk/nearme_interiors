@@ -503,7 +503,7 @@ export const locationsData: LocationData[] = [
     ],
     localOffice: {
       address: 'Level 5, Maker Maxity, Bandra Kurla Complex, Mumbai, MH 400051',
-      phone: '+91 22 6982 7800',
+      phone: '+91 8240669415',
       email: 'mumbai@auraarch.agency'
     }
   },
@@ -644,7 +644,7 @@ export const locationsData: LocationData[] = [
     localOffice: {
       address: 'Bengal Intelligent Park, Sector V, Salt Lake, Kolkata, WB 700091',
       phone: '+91 33 6610 8900',
-      email: 'kolkata@auraarch.agency'
+      email: 'info@starwaywebdigital.com'
     }
   },
   {
